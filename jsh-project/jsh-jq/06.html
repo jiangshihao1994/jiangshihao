@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>JQ-DOM-捕获</title>
+
+    <script src="jQuery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            $("#btn").click(function() {　
+                // alert("text:" + $("#pid").text());   只能获取内容
+                //alert("text:" + $("#pid").html());  可以获取到标签
+                alert("text:" + $("#test1").val());
+            });
+            $("#btn2").click(function() {
+                // alert("text:" + $("#aid").attr("id")); 获取属性 
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <p id="pid">pp<a>this is a</a></p>
+    <button id="btn">click me</button>
+    <input type="text" id="test1" value="jiangshihao">
+    <a href="htpp://wwww.baidu.com" id="aid">baidu</a>
+    <button id="btn2">click me</button>
+
+
+</body>
+
+</html>

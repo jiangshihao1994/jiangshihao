@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <input type="text" id="username">
+    <button id="btn" onclick="safe()">提交</button>
+    <script>
+        function safe() {
+            var name = document.getElementById("username").value;
+            if (name == "jiangshihao") {
+                history.go(-1);
+            } else {
+                alert("用户名错误！！");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

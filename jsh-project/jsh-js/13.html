@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+</body>
+<script>
+    /*
+        people = new Object();
+        people.name = "jiangshihao";
+        people.age = "25";
+        document.write("name" + people.name + ",age:" + people.age);
+        */
+    // people = {
+    //    name: "jiangshihao",
+    //    age: "25"
+    //  };
+    //  document.write("name:" + people.name + ",age:" + people.age);
+    function people(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    son = new people("jiangshihao", 25);
+    document.write("name:" + son.name + ",age:" + son.age);
+</script>
+
+</html>

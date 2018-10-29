@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>JQ遍历-同级</title>
+
+    <script src="jQuery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            /*
+             siblings:除自己，其余所有同级元素。
+             next：下一个元素。
+             nextAll：下面所有所有元素修改
+             nextUntil：指定向下区间的元素修改
+             prev：向上
+             preALL：向上所有。
+             prevUntil：向上指定区间。
+              $("h4").siblings().css({
+                  border: "3px solid yellow"
+               });
+             $("h4").next().css({
+                 border: "3px solid yellow"
+              });
+              $("h4").nextAll().css({
+                  border: "3px solid yellow"
+              });
+              */
+            $("h2").nextUntil("h6").css({
+                border: "3px solid yellow"
+            });
+        });
+    </script>
+    <style>
+        .div * {
+            display: block;
+            border: 3px solid blue;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <p>p</p>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+    </div>
+</body>
+
+</html>

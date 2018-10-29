@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>JQ-垂直菜单</title>
+
+    <script src="jQuery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            $(".main>a").click(function() {
+                var ulnode = $(this).next("ul");
+                ulnode.slideToggle();
+            })
+            $(".hmain").hover(function() {
+                $(this).children("ul").slideToggle();
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <li class="main">
+        <a href="#">菜单1</a>
+        <ul>
+            <li><a href="#">子菜单1</a></li>
+            <li><a href="#">子菜单2</a></li>
+        </ul>
+    </li>
+    <li class="main">
+        <a href="#">菜单2</a>
+        <ul>
+            <li><a href="#">子菜单1</a></li>
+            <li><a href="#">子菜单2</a></li>
+        </ul>
+    </li>
+    <li class="main">
+        <a href="#">菜单3</a>
+        <ul>
+            <li><a href="#">子菜单1</a></li>
+            <li><a href="#">子菜单2</a></li>
+        </ul>
+    </li>
+    <br>
+    <br>
+    <br>
+    <br>
+    <li class="hmain">
+        <a href="#">菜单1</a>
+        <ul>
+            <li><a href="#">子菜单1</a></li>
+            <li><a href="#">子菜单2</a></li>
+        </ul>
+    </li>
+    <li class="hmain">
+        <a href="#">菜单2</a>
+        <ul>
+            <li><a href="#">子菜单1</a></li>
+            <li><a href="#">子菜单2</a></li>
+        </ul>
+    </li>
+    <li class="hmain">
+        <a href="#">菜单3</a>
+        <ul>
+            <li><a href="#">子菜单1</a></li>
+            <li><a href="#">子菜单2</a></li>
+        </ul>
+    </li>
+
+</body>
+
+</html>
+<style>
+    ul,
+    li {
+        list-style: none;
+        font-size: 15px;
+    }
+    
+    ul {
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    .main,
+    .hmain {
+        background-image: url(./images/2.jpg);
+        background-repeat: repeat-x;
+        width: 100px;
+    }
+    
+    li {
+        background-color: #eeeeee;
+    }
+    
+    a {
+        text-decoration: none;
+        padding-left: 20px;
+        display: block;
+        width: 80px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+    
+    .main a,
+    .hmain a {
+        color: white;
+    }
+    
+    .main li a,
+    .hmain li a {
+        color: black;
+    }
+    
+    .main ul,
+    .hmain ul {
+        display: none;
+    }
+    
+    .hmain {
+        float: left;
+        margin-right: 1px;
+    }
+</style>

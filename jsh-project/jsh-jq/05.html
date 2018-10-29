@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>事件的冒泡</title>
+    <script src="jQuery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            $("body").on("click", demo1);
+            $("div").on("click", demo2);
+            $("div").on("click", demo3)
+        });
+
+        function demo1(event) {
+            console.log(event);
+        }
+
+        function demo2(event) {
+            console.log(event);
+            // event.stopPropagation(); 阻止父级冒泡
+            //event.stopImmediatePropagation();  阻止所有冒泡
+        }
+
+        function demo3(event) {
+            console.log(event);
+        }
+    </script>
+</head>
+
+<body>
+    <div style="width: 200px; height:200px;background-color:yellow">
+        <ul>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+        </ul>
+    </div>
+</body>
+
+</html>

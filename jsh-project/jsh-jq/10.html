@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>JQ效果</title>
+
+    <script src="jQuery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            $("#btn1").click(function() {
+                $("#pid").hide(1000); //hide（）里面单位为毫秒,1000毫秒为1秒，可以添加时间。
+            });
+            $("#btn2").click(function() {
+                $("#pid").show(1000); //跟hide道理一样。
+            });
+            $("#btn3").click(function() {
+                $("#pid").toggle(1000); //隐藏和显示，实现在一个按钮上。
+            })
+        });
+    </script>
+
+
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            background-color: yellow;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    <p id="pid">hello world</p>
+
+    <button id="btn1">隐藏</button>
+    <button id="btn2">显示</button>
+    <button id="btn3">隐藏/显示</button>
+    -->
+    <script>
+        for (var i = 0; i < 5; i++) {
+            $("<div>").appendTo(document.body); //添加div元素
+        }
+        $("div").click(function() {
+            $(this).hide(2000, function() { //通过this 索引div
+                $(this).remove();
+            });
+        })
+    </script>
+</body>
+
+</html>

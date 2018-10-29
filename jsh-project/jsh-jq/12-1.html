@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>JQ CSS</title>
+
+    <script src="jQuery-3.3.1.js"></script>
+    <script>
+        /*  $(function() {
+                                                                  $("div").css({
+                                                                  width: "100px",
+                                                                  height: "100px",
+                                                                    backgroundColor: "red"
+                                                                      });
+                                                                });
+                                                              */
+        $(function() {
+            // alert($("#div1").height()); //.height()和.width() 只是盒子高度和宽度，不包括内外边距。
+            // alert($("#div1").innerHeight());// innerHeighth和innerWidth 包含内边距的高和宽。
+            alert($("#div1").outerHeight(true)) //不加true值则是包含边框+内边距+盒子自身高宽，加true则加上外边距
+        });
+    </script>
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            margin: 50px;
+            padding: 50px;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+
+</body>
+
+</html>

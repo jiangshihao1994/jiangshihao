@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>JQ效果淡入淡出</title>
+
+    <script src="jQuery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            $("#btn1").on("click", function() {
+                $("#div1").fadeIn(1000);
+                $("#div2").fadeIn(1000);
+                $("#div3").fadeIn(1000);
+            });
+            $("#btn2").on("click", function() {
+                $("#div1").fadeOut(1000);
+                $("#div2").fadeOut(1000);
+                $("#div3").fadeOut(1000);
+            });
+            $("#btn3").on("click", function() {
+                $("#div1").fadeToggle(1000);
+                $("#div2").fadeToggle(1000);
+                $("#div3").fadeToggle(1000);
+            });
+            $("#btn4").on("click", function() {
+                $("#div1").fadeTo(1000, 0.1);
+                $("#div2").fadeTo(1000, 1);
+                $("#div3").fadeTo(1000, 0.5);
+                //1000为动画时间，0.5为透明度
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btn1">淡入 fade in</button>
+    <button id="btn2">淡出 fade out</button>
+    <button id="btn3">淡入淡出 fade toggle</button>
+    <button id="btn4">淡化/透明 fade to</button>
+    <div id="div1" style="width: 100px;height: 100px;display:none;  background-color: yellow"></div>
+    <div id="div2" style="width: 100px;height: 100px;display:none; background-color:red"></div>
+    <div id="div3" style="width: 100px;height: 100px;display:none; background-color:blue"></div>
+</body>
+
+</html>

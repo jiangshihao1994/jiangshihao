@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+
+</head>
+<style>
+    .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        border-width: 10px;
+        /*
+            如果给border-width设定四个值，四个值则会按照顺时针分别分给：上，右，下，左
+            例如：border-width: 10px 20px 30px 40px;
+            如果设定三个值，三个值则分别分给：上，左右，下
+            例如：border-width: 10px 20px 30px;
+            如果设定两个值，两个值分给：上，下        
+        */
+        border-color: yellow;
+        /*
+        border-color道理跟border-width一样
+        例如：border-color:red yellow green blue;
+        */
+        border-style: solid;
+        /*
+        border-style也可以给给四个边框设设置样式，道理跟border-width一样
+        */
+    }
+</style>
+
+<body>
+    <div class="box1"></div>
+</body>
+
+</html>

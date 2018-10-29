@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>JQ遍历-向下</title>
+
+    <script src="jQuery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            //  $("#div1").children("#div2").css({
+            //      border: "3px solid blue"
+            //  });
+            $("#div1").find("p").css({
+                border: "3px solid blue"
+            });
+        });
+        //区别在于children只能用于儿子关系的元素，find可以是任何元素，且find必须传值，children可以不传
+    </script>
+    <style>
+        #div1 {
+            width: 500px;
+            height: 300px;
+            border: 3px solid chocolate;
+        }
+        
+        #div2 {
+            width: 400px;
+            height: 200px;
+            margin-top: 10px;
+            margin-left: 10px;
+            border: 3px solid chocolate;
+        }
+        
+        p {
+            margin-top: 10px;
+            margin-left: 10px;
+            width: 200px;
+            height: 100px;
+            border: 3px solid chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">div1
+        <div id="div2">div2
+            <p>
+                <a>hello</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

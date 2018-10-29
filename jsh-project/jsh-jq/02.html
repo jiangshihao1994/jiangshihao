@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>JQ选择器</title>
+
+    <script src="jQuery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            $("button").click(function() {
+                //$("p").text("p元素被修改");
+                // $("#pid").text("p元素被修改");
+                $(".pclass").text("p元素被修改");
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <p id="pid">pp</p>
+    <p class="pclass">aa</p>
+    <button>click me</button>
+</body>
+
+</html>

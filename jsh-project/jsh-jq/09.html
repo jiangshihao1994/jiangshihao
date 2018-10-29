@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>JQ删除元素</title>
+
+    <script src="jQuery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            $("#btn1").click(function() {
+                //$("#div1").remove();  区别在于删除里面的子元素和全部删除
+                $("#div1").empty();
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="div1" style="width:200px; height:200px;border:1px solid black ; background-color:palegreen">
+        <p>hello world</p>
+        hello world
+        <p>hello</p>
+    </div>
+
+
+    <button id="btn1">删除</button>
+</body>
+
+</html>

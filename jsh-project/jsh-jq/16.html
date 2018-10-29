@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>JQ遍历-过滤</title>
+
+    <script src="jQuery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            /*
+            first:第一个修改
+            last：最后一个修改
+            eq：为索引，需传值，参考数组
+            filter：需满足传值的条件的元素修改
+            not：与filter相反，满足条件则不修改
+             $("div p").first().css("background-color", "red");
+             $("div p").last().css("background-color", "red");
+               $("div p").eq(1).css("background-color", "red");
+            $("div p").filter(".pclass").css("background-color", "red");
+            */
+            $("div p").not(".pclass").css("background-color", "red");
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <p>div1</p>
+    </div>
+    <div>
+        <p class="pclass">div2</p>
+    </div>
+    <div>
+        <p class="pclass">div3</p>
+    </div>
+    <div>
+        <p>div4</p>
+    </div>
+</body>
+
+</html>

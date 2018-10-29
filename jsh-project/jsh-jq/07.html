@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>JQ-DOM-设置</title>
+
+    <script src="jQuery-3.3.1.js"></script>
+    <script>
+        $(function() {
+            $("#btn").click(function() {
+                $('#pid').text("jiangshihao");
+            });
+            $("#btn2").click(function() {
+                $('#p2').html('<a href="www.baidu.com">baidu</a>');
+            });
+            $("#btn3").click(function() {
+                $('#in1').val("jiangyan");
+            });
+            $("#btn4").click(function() {
+                $('#aid').attr({
+                    "href": "wwww.jiangshihao.com",
+                    "title": "asd",
+                });
+            });
+            $("#btn5").click(function() {
+                $('#p3').text(function(i, sum) {
+                    return "old:" + sum + " new:你好世界！" + (i);
+                });
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <p id="pid">hello world</p>
+    <p id="p2">hello world</p>
+    <button id="btn">click me</button>
+    <button id="btn2">click me</button>
+    <input type="text" id="in1" value="jiangshihao">
+    <button id="btn3">click me</button>
+    <br/>
+    <a id="aid" href="wwww.baidu.com">baidu</a>
+    <button id="btn4">click me</button>
+    <br/>
+    <p id="p3"> hello world</p>
+    <button id="btn5">click me</button>
+
+</body>
+
+</html>

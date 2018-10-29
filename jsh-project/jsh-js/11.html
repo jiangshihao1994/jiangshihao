@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <button id="test">按钮</button>
+    <script>
+        var x = document.getElementById("test");
+        if (x.addEventListener) {
+            x.addEventListener("click", demo1);
+        } else if (x.attachEvent) {
+            x.attachEvent("onclick", demo1);
+        } else {
+            test.onclick = demo1();
+        }
+
+        function demo1() {
+            alert("hello");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <button id="test">按钮</button>
+    <script>
+        var x = document.getElementById("test");
+        x.addEventListener("click", demo1);
+        x.addEventListener("click", demo2);
+        x.removeEventListener("click", demo1);
+
+        function demo1() {
+            alert("hello")
+        }
+
+        function demo2() {
+            alert("world")
+        }
+    </script>
+</body>
+
+</html>

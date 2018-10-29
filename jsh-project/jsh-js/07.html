@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="test" type="text">
+    <input id="btn" type="button" onclick="demo()" value="按钮">
+    <script>
+        function demo() {
+            try {
+                var e = document.getElementById("test").value;
+                if (e == "") {
+                    throw "第一个用户输入为空";
+                }
+            } catch (err) {
+                alert(err);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

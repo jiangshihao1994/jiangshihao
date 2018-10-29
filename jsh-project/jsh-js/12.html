@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div id="test2">
+        <button id="test">按钮</button>
+        <a href="www.baidu.com" id="aid">百度</a>
+    </div>
+    <script>
+        document.getElementById("test").addEventListener("click", demo1);
+        document.getElementById("test2").addEventListener("click", demo2);
+        document.getElementById("aid").addEventListener("click", demo3);
+
+        function demo1(event) {
+            //     alert(event.type);
+            alert(event.target);
+            event.stopPropagation();
+
+        }
+
+        function demo2() {
+            alert("div");
+        }
+
+        function demo3(event) {
+            event.stopPropagation();
+            event.preventDefault();
+
+        }
+    </script>
+</body>
+
+</html>
